@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A population pyramid for the US in 2000, created using stack. See https://vega.github.io/vega-lite/examples/concat_population_pyramid.html for a variant of this created using concat.",
+  "data": {
+    "url": "https://vega.github.io/editor/data/population.json"
+  },
+  "transform": [
+    { "filter": "datum.year == 2000" },
+    { "calculate": "datum.sex == 2 ? 'Female' : 'Male'", "as": "gender" },
+    {
+      "calculate": "datum.sex == 2 ? -datum.people : datum.people",
+      "as": "signed_people"
+    }
+  ],
+  "width": 300,
+  "height": 200,
+  "mark": { "type": "bar" },
+  "encoding": {
+    "y": {
+      "field": "age",
+      "axis": { "labelColor": "#555" },
+      "sort": "descending"
+    },
+    "x": {
+      "aggregate": "sum",
+      "field": "signed_people",
+      "title": null,
+      "axis": {
+        "format": "s",
+        "labelColor": "#555",
+        "gridColor": "rgba(0,0,0,0.06)"
+      }
+    },
+    "color": {
+      "field": "gender",
+      "scale": {
+        "range": ["#667eea", "#764ba2"]
+      },
+      "legend": {
+        "orient": "top",
+        "title": null,
+        "labelColor": "#555"
+      }
+    }
+  },
+  "config": {
+    "background": null,
+    "view": { "stroke": null },
+    "axis": {
+      "grid": true,
+      "tickColor": "rgba(0,0,0,0.06)"
+    },
+    "font": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+    "bar": {
+      "cornerRadiusTopLeft": 4,
+      "cornerRadiusTopRight": 4
+    }
+  }
+}
+

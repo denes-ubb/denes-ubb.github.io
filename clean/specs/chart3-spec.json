@@ -1,0 +1,14 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "A simple bar chart with embedded data.",
+  "data": {
+    "url": "data/adatom.json"
+  },
+  "mark": "point",
+  "encoding": {
+    "x": { "field": "a", "type": "nominal" },
+    "y": { "field": "b", "type": "quantitative" },
+    "column": { "field": "c", "type": "nominal" }
+  }
+}
+

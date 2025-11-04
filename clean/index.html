@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome!</h1>
+      <p class="subtitle">Your journey starts here</p>
+      <p class="description">
+        This is a beautiful welcome page designed to greet visitors with style
+        and elegance. Built with modern CSS techniques including gradients,
+        animations, and responsive design.
+      </p>
+
+      <a href="#" class="cta-button">Get Started</a>
+
+      <div class="chart-container">
+        <div id="chart1"></div>
+        <div id="chart2"></div>
+        <div id="chart3"></div>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">🚀</div>
+          <div class="feature-title">Fast</div>
+          <div class="feature-desc">Lightning quick performance</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🎨</div>
+          <div class="feature-title">Beautiful</div>
+          <div class="feature-desc">Modern, clean design</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📱</div>
+          <div class="feature-title">Responsive</div>
+          <div class="feature-desc">Works on all devices</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const embedOpts = { actions: false, renderer: "svg" };
+
+      // Load and embed chart specifications from separate files
+      vegaEmbed("#chart1", "specs/chart1-spec.json", embedOpts);
+      vegaEmbed("#chart2", "specs/chart2-spec.json", embedOpts);
+      vegaEmbed("#chart3", "specs/chart3-spec.json", embedOpts);
+    </script>
+  </body>
+</html>
+
