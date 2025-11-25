@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome - Vizzu Version</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <!-- Vizzu library from CDN - loaded as module and made global -->
+    <script type="module">
+      import Vizzu from 'https://cdn.jsdelivr.net/npm/vizzu@0.17/dist/vizzu.min.js';
+      window.Vizzu = Vizzu;
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome!</h1>
+      <p class="subtitle">Your journey starts here</p>
+      <p class="description">
+        This is a beautiful welcome page designed to greet visitors with style
+        and elegance. Built with modern CSS techniques including gradients,
+        animations, and responsive design. (Vizzu Version)
+      </p>
+
+      <a href="#" class="cta-button">Get Started</a>
+
+      <div class="chart-container">
+        <div class="chart-wrapper">
+          <div id="chart1" class="vizzu-chart"></div>
+        </div>
+        
+        <!-- Chart 2 with control button -->
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div class="chart-wrapper">
+            <div id="chart2" class="vizzu-chart"></div>
+          </div>
+          <div style="text-align: center;">
+            <button id="btn-animate-chart2" class="cta-button" style="padding: 0.5rem 1rem; font-size: 0.8rem; background: white; color: #667eea; border: 2px solid #667eea;">Morph to Line</button>
+          </div>
+        </div>
+
+        <div class="chart-wrapper">
+          <div id="chart3" class="vizzu-chart"></div>
+        </div>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">🚀</div>
+          <div class="feature-title">Fast</div>
+          <div class="feature-desc">Lightning quick performance</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🎨</div>
+          <div class="feature-title">Beautiful</div>
+          <div class="feature-desc">Modern, clean design</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📱</div>
+          <div class="feature-title">Responsive</div>
+          <div class="feature-desc">Works on all devices</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/charts.js"></script>
+  </body>
+</html>
