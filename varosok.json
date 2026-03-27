@@ -10,5 +10,6 @@
   { "region": "Alba", "year": "1999-01-01", "population": 406478 },
   { "region": "Covasna", "year": "1997-01-01", "population": 233039 },
   { "region": "Covasna", "year": "1998-01-01", "population": 232871 },
-  { "region": "Covasna", "year": "1999-01-01", "population": 232747 }
+  { "region": "Covasna", "year": "1999-01-01", "population": 232747 },
+  { "region": "Cluj", "year": "2000-01-01", "population": 832747 }
 ]
