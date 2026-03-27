@@ -1,0 +1,14 @@
+[
+  { "region": "Cluj", "year": "1997-01-01", "population": 724667 },
+  { "region": "Cluj", "year": "1998-01-01", "population": 722474 },
+  { "region": "Cluj", "year": "1999-01-01", "population": 721245 },
+  { "region": "Satu Mare", "year": "1997-01-01", "population": 406420 },
+  { "region": "Satu Mare", "year": "1998-01-01", "population": 405122 },
+  { "region": "Satu Mare", "year": "1999-01-01", "population": 404438 },
+  { "region": "Alba", "year": "1997-01-01", "population": 409942 },
+  { "region": "Alba", "year": "1998-01-01", "population": 408257 },
+  { "region": "Alba", "year": "1999-01-01", "population": 406478 },
+  { "region": "Covasna", "year": "1997-01-01", "population": 233039 },
+  { "region": "Covasna", "year": "1998-01-01", "population": 232871 },
+  { "region": "Covasna", "year": "1999-01-01", "population": 232747 }
+]
