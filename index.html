@@ -1,3 +1,26 @@
-hello world222
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vega-Lite Visualization</title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    #vis { width: 50%; }
+  </style>
+</head>
+<body>
+  <h1>Vega-Lite Visualization</h1>
+  <div id="vis"></div>
 
-bla bala gfgdfgd
+  <script>
+    fetch('spec.json')
+      .then(r => r.json())
+      .then(spec => vegaEmbed('#vis', spec, {actions: false}))
+      .catch(console.error);
+  </script>
+</body>
+</html>
