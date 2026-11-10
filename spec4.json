@@ -1,0 +1,27 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Grouped bar chart comparing categories across groups.",
+  "data": {
+    "values": [
+      {"category": "North", "group": "2021", "value": 42},
+      {"category": "North", "group": "2022", "value": 51},
+      {"category": "North", "group": "2023", "value": 58},
+      {"category": "South", "group": "2021", "value": 35},
+      {"category": "South", "group": "2022", "value": 44},
+      {"category": "South", "group": "2023", "value": 49},
+      {"category": "East", "group": "2021", "value": 38},
+      {"category": "East", "group": "2022", "value": 46},
+      {"category": "East", "group": "2023", "value": 53},
+      {"category": "West", "group": "2021", "value": 40},
+      {"category": "West", "group": "2022", "value": 48},
+      {"category": "West", "group": "2023", "value": 55}
+    ]
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "category", "type": "nominal", "axis": {"title": "Region"}},
+    "y": {"field": "value", "type": "quantitative", "axis": {"title": "Performance Score"}},
+    "xOffset": {"field": "group", "type": "nominal"},
+    "color": {"field": "group", "type": "nominal", "scale": {"scheme": "tableau10"}}
+  }
+}

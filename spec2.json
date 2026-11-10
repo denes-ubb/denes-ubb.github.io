@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Line chart showing trend over time.",
+  "data": {
+    "values": [
+      {"year": 2018, "metric": 45},
+      {"year": 2019, "metric": 52},
+      {"year": 2020, "metric": 38},
+      {"year": 2021, "metric": 61},
+      {"year": 2022, "metric": 67},
+      {"year": 2023, "metric": 73}
+    ]
+  },
+  "mark": {"type": "line", "point": true, "color": "#2c7fb8"},
+  "encoding": {
+    "x": {"field": "year", "type": "temporal", "timeUnit": "year", "axis": {"title": "Year"}},
+    "y": {"field": "metric", "type": "quantitative", "axis": {"title": "Index Value"}}
+  }
+}
