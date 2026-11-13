@@ -1,0 +1,12 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Grouped bar chart comparing categories across groups.",
+  "data": {"url": "data/data4.json"},
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "category", "type": "nominal", "axis": {"title": "Region"}},
+    "y": {"field": "value", "type": "quantitative", "axis": {"title": "Performance Score"}},
+    "xOffset": {"field": "group", "type": "nominal"},
+    "color": {"field": "group", "type": "nominal", "scale": {"scheme": "tableau10"}}
+  }
+}

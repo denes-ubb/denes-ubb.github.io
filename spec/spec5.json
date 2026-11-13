@@ -1,0 +1,16 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Heatmap showing intensity across dimensions.",
+  "data": {"url": "data/data5.json"},
+  "mark": "rect",
+  "encoding": {
+    "x": {"field": "col", "type": "nominal", "axis": {"title": "Demographic"}},
+    "y": {"field": "row", "type": "nominal", "axis": {"title": "Policy"}},
+    "color": {"field": "score", "type": "quantitative", "scale": {"scheme": "viridis"}},
+    "text": {"field": "score", "type": "quantitative", "format": ".0%"}
+  },
+  "layer": [
+    {"mark": "rect"},
+    {"mark": {"type": "text", "color": "white", "fontSize": 12}, "encoding": {"text": {"field": "score", "type": "quantitative", "format": ".0%"}}}
+  ]
+}

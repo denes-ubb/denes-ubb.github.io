@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,27 +9,121 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
   <style>
-    body { font-family: Georgia, serif; max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; line-height: 1.7; color: #2d2d2d; background: #fafafa; }
-    .article-header { text-align: center; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 3px double #333; }
-    .article-header h1 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 1rem; color: #1a1a1a; }
-    .article-header .byline { font-size: 1.1rem; color: #555; font-style: italic; }
-    .article-header .dateline { color: #777; font-size: 0.9rem; margin-top: 0.5rem; }
-    .lead { font-size: 1.25rem; line-height: 1.6; color: #333; margin-bottom: 2rem; padding: 1.5rem; background: #fff; border-left: 4px solid #2c7fb8; }
-    .section { margin: 3rem 0; }
-    .section h2 { font-size: 1.5rem; color: #1a1a1a; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #ddd; }
-    .section p { margin-bottom: 1rem; text-align: justify; }
-    .viz-container { margin: 2rem 0; text-align: center; }
-    .viz-container div { display: inline-block; max-width: 100%; }
-    .caption { font-size: 0.85rem; color: #666; font-style: italic; margin-top: 0.5rem; text-align: center; }
-    .pullquote { font-size: 1.3rem; line-height: 1.5; color: #2c7fb8; border-left: 4px solid #2c7fb8; padding-left: 1.5rem; margin: 2rem 0; font-style: italic; }
-    .conclusion { background: #fff; padding: 2rem; border-top: 3px double #333; margin-top: 3rem; }
-    .conclusion h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+    body {
+      font-family: Georgia, serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      line-height: 1.7;
+      color: #2d2d2d;
+      background: #fafafa;
+    }
+
+    .article-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 3px double #333;
+    }
+
+    .article-header h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: #1a1a1a;
+    }
+
+    .article-header .byline {
+      font-size: 1.1rem;
+      color: #555;
+      font-style: italic;
+    }
+
+    .article-header .dateline {
+      color: #777;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    .lead {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: #fff;
+      border-left: 4px solid #2c7fb8;
+    }
+
+    .section {
+      margin: 3rem 0;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .section p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .viz-container {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .viz-container div {
+      display: inline-block;
+      max-width: 100%;
+    }
+
+    .caption {
+      font-size: 0.85rem;
+      color: #666;
+      font-style: italic;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+
+    .pullquote {
+      font-size: 1.3rem;
+      line-height: 1.5;
+      color: #2c7fb8;
+      border-left: 4px solid #2c7fb8;
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+    }
+
+    .conclusion {
+      background: #fff;
+      padding: 2rem;
+      border-top: 3px double #333;
+      margin-top: 3rem;
+    }
+
+    .conclusion h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
     @media (max-width: 600px) {
-      .article-header h1 { font-size: 1.8rem; }
-      .lead { font-size: 1.1rem; }
+      .article-header h1 {
+        font-size: 1.8rem;
+      }
+
+      .lead {
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
+
 <body>
   <header class="article-header">
     <h1>The Data Behind the Divide: What Numbers Reveal About Our Fractured Policy Landscape</h1>
@@ -37,16 +132,22 @@
   </header>
 
   <div class="lead">
-    We like to believe our policy debates are driven by principle. The data tells a different story: they are driven by geography, by inertia, and by the quiet accumulation of advantage that compounds across decades. What follows is not an argument — it is an accounting.
+    We like to believe our policy debates are driven by principle. The data tells a different story: they are driven by
+    geography, by inertia, and by the quiet accumulation of advantage that compounds across decades. What follows is not
+    an argument — it is an accounting.
   </div>
 
   <section class="section">
     <h2>The Trend That Should Have Been a Warning</h2>
     <p>
-      Start with the baseline. Figure 1 tracks the composite opportunity index across six years — a measure combining educational attainment, healthcare access, and economic mobility. The line does not lie. From 2018 to 2023, the national average climbed from 45 to 73, a 62% improvement. But averages obscure. The gains concentrated in regions already ahead; the gap between top and bottom quartiles widened by 18 points.
+      Start with the baseline. Figure 1 tracks the composite opportunity index across six years — a measure combining
+      educational attainment, healthcare access, and economic mobility. The line does not lie. From 2018 to 2023, the
+      national average climbed from 45 to 73, a 62% improvement. But averages obscure. The gains concentrated in regions
+      already ahead; the gap between top and bottom quartiles widened by 18 points.
     </p>
     <p>
-      This is the first lesson of the data: aggregate progress masks divergent trajectories. A rising tide lifts all boats only when the boats are in the same water.
+      This is the first lesson of the data: aggregate progress masks divergent trajectories. A rising tide lifts all
+      boats only when the boats are in the same water.
     </p>
     <div class="viz-container">
       <div id="vis1"></div>
@@ -57,7 +158,10 @@
   <section class="section">
     <h2>Correlation Is Not Causation — But It Is a Map</h2>
     <p>
-      Figure 2 plots input investment against measurable outcome across nine regional clusters. The pattern is unmistakable: clusters that crossed the 30-unit investment threshold saw outcomes jump disproportionately. Below that threshold, the relationship flattens. This suggests a tipping point — a minimum viable investment level below which marginal returns vanish.
+      Figure 2 plots input investment against measurable outcome across nine regional clusters. The pattern is
+      unmistakable: clusters that crossed the 30-unit investment threshold saw outcomes jump disproportionately. Below
+      that threshold, the relationship flattens. This suggests a tipping point — a minimum viable investment level below
+      which marginal returns vanish.
     </p>
     <p>
       Policy makers treat funding as a dial. The data says it's a switch.
@@ -65,13 +169,17 @@
     <div class="viz-container">
       <div id="vis2"></div>
     </div>
-    <p class="caption">Figure 2: Investment-Outcome Correlation by Regional Cluster. Each point represents a cluster-year observation.</p>
+    <p class="caption">Figure 2: Investment-Outcome Correlation by Regional Cluster. Each point represents a
+      cluster-year observation.</p>
   </section>
 
   <section class="section">
     <h2>The Regional Gap That Policy Forgot</h2>
     <p>
-      Figure 3 breaks performance by region across three years. The Northeast pulls away. The South narrows the gap only marginally. The West shows volatility — gains in 2022 erased by 2023 reversals. The Midwest stagnates. These are not random fluctuations. They map onto decades of infrastructure decisions, tax base erosion, and migration patterns that no single administration created and no single bill can reverse.
+      Figure 3 breaks performance by region across three years. The Northeast pulls away. The South narrows the gap only
+      marginally. The West shows volatility — gains in 2022 erased by 2023 reversals. The Midwest stagnates. These are
+      not random fluctuations. They map onto decades of infrastructure decisions, tax base erosion, and migration
+      patterns that no single administration created and no single bill can reverse.
     </p>
     <div class="pullquote">
       The regions falling behind are not failing to try. They are trying against a headwind measured in decades.
@@ -88,7 +196,10 @@
   <section class="section">
     <h2>Which Policies Work Where — And Why It Matters</h2>
     <p>
-      Figure 4 is the most actionable chart in this story. It cross-tabulates four policy approaches against three demographic contexts. Policy A excels in urban cores but collapses in rural settings. Policy B shows the reverse. Policy C is the only one with consistent above-average performance across all three. Policy D underperforms everywhere — yet receives 34% of allocated funding.
+      Figure 4 is the most actionable chart in this story. It cross-tabulates four policy approaches against three
+      demographic contexts. Policy A excels in urban cores but collapses in rural settings. Policy B shows the reverse.
+      Policy C is the only one with consistent above-average performance across all three. Policy D underperforms
+      everywhere — yet receives 34% of allocated funding.
     </p>
     <p>
       This is not a recommendation. It is a reallocation argument dressed in evidence.
@@ -96,16 +207,20 @@
     <div class="viz-container">
       <div id="vis4"></div>
     </div>
-    <p class="caption">Figure 4: Policy Effectiveness Heatmap by Demographic Context. Scores normalized 0–1; darker green indicates higher effectiveness.</p>
+    <p class="caption">Figure 4: Policy Effectiveness Heatmap by Demographic Context. Scores normalized 0–1; darker
+      green indicates higher effectiveness.</p>
   </section>
 
   <section class="section">
     <h2>The Bar Chart That Started It All</h2>
     <p>
-      We return to where we began. Figure 5 shows the raw category breakdown that underpins the index. Category H — digital infrastructure access — leads at 87. Category G — rural broadband penetration — trails at 19. The 68-point spread is not a technology gap. It is an investment choice, repeated annually, compounded across a generation.
+      We return to where we began. Figure 5 shows the raw category breakdown that underpins the index. Category H —
+      digital infrastructure access — leads at 87. Category G — rural broadband penetration — trails at 19. The 68-point
+      spread is not a technology gap. It is an investment choice, repeated annually, compounded across a generation.
     </p>
     <p>
-      The op-ed page demands a conclusion. The data offers only a ledger. We have measured the divide. We know its contours. We know which levers move which needles. The remaining variable is not analytical. It is political.
+      The op-ed page demands a conclusion. The data offers only a ledger. We have measured the divide. We know its
+      contours. We know which levers move which needles. The remaining variable is not analytical. It is political.
     </p>
     <div class="viz-container">
       <div id="vis5"></div>
@@ -116,22 +231,27 @@
   <section class="conclusion">
     <h2>What We Owe the Numbers</h2>
     <p>
-      Data does not speak for itself. It speaks for those who bother to listen. Every chart above represents thousands of individual records — a student's test score, a clinic's wait time, a family's broadband bill — aggregated into patterns that demand response. The op-ed tradition asks writers to take a stand. The data tradition asks readers to check the work.
+      Data does not speak for itself. It speaks for those who bother to listen. Every chart above represents thousands
+      of individual records — a student's test score, a clinic's wait time, a family's broadband bill — aggregated into
+      patterns that demand response. The op-ed tradition asks writers to take a stand. The data tradition asks readers
+      to check the work.
     </p>
     <p>
-      We have done both. The specs are public. The sources are cited. The conclusions are yours to contest. But the numbers? The numbers are not negotiable.
+      We have done both. The specs are public. The sources are cited. The conclusions are yours to contest. But the
+      numbers? The numbers are not negotiable.
     </p>
   </section>
 
   <script>
     const vizIds = ['vis1', 'vis2', 'vis3', 'vis4', 'vis5'];
-    const specFiles = ['spec2.json', 'spec3.json', 'spec4.json', 'spec5.json', 'spec.json'];
+    const specFiles = ['spec/spec2.json', 'spec/spec3.json', 'spec/spec4.json', 'spec/spec5.json', 'spec/spec.json'];
 
     Promise.all(
       specFiles.map((file, i) =>
-        fetch(file).then(r => r.json()).then(spec => vegaEmbed(`#${vizIds[i]}`, spec, {actions: false}))
+        fetch(file).then(r => r.json()).then(spec => vegaEmbed(`#${vizIds[i]}`, spec, { actions: true }))
       )
     ).catch(console.error);
   </script>
 </body>
+
 </html>

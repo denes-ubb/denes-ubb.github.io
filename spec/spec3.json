@@ -1,0 +1,33 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Scatter plot showing correlation.",
+  "data": {"url": "data/data3.json"},
+  "mark": {
+    "type": "circle",
+    "size": 80,
+    "opacity": 0.7
+  },
+  "encoding": {
+    "x": {
+      "field": "x",
+      "type": "quantitative",
+      "axis": {
+        "title": "Input Factor"
+      }
+    },
+    "y": {
+      "field": "y",
+      "type": "quantitative",
+      "axis": {
+        "title": "Outcome"
+      }
+    },
+    "color": {
+      "field": "group",
+      "type": "nominal",
+      "scale": {
+        "scheme": "category10"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {"row": "Policy A", "col": "Urban", "score": 0.82},
+  {"row": "Policy A", "col": "Suburban", "score": 0.65},
+  {"row": "Policy A", "col": "Rural", "score": 0.41},
+  {"row": "Policy B", "col": "Urban", "score": 0.58},
+  {"row": "Policy B", "col": "Suburban", "score": 0.72},
+  {"row": "Policy B", "col": "Rural", "score": 0.55},
+  {"row": "Policy C", "col": "Urban", "score": 0.71},
+  {"row": "Policy C", "col": "Suburban", "score": 0.68},
+  {"row": "Policy C", "col": "Rural", "score": 0.79},
+  {"row": "Policy D", "col": "Urban", "score": 0.44},
+  {"row": "Policy D", "col": "Suburban", "score": 0.52},
+  {"row": "Policy D", "col": "Rural", "score": 0.63}
+]
